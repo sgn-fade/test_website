@@ -1,25 +1,49 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>3 Column Layout</title>
+    <link rel="stylesheet" href="assets/css/layout.css">
 </head>
 <body>
-<link rel="stylesheet" href="assets/css/layout.css">
-<div class="about-section">
-    <h1 style="font-size: 36px; color: #333;">About us</h1>
-    <p style="font-size: 20px; line-height: 1.5; color: #666;">
-        Welcome to our About Us page. We are a team of experts from various fields,
-        that works together to achieve common goals. Our mission is to provide quality products and
-        services to our customers and develop innovative solutions.
-    </p>
-    <p style="font-size: 18px; font-style: italic; color: #999;">
-        Together we can achieve great things!
-    </p>
-</div>
+<header class="header">
+    <img src="assets/img/2.jpg" alt="logo" width="200" height="100">
+    <p>Header...</p></header>
+<div class="container">
+    <main class="center column">
+        <div class="about-section">
+            <h1 style="font-size: 36px; color: #333;">About us</h1>
+            <p style="font-size: 20px; line-height: 1.5; color: #666;">
+                Welcome to our About Us page. We are a team of experts from various fields,
+                that works together to achieve common goals. Our mission is to provide quality products and
+                services to our customers and develop innovative solutions.
+            </p>
+            <p style="font-size: 18px; font-style: italic; color: #999;">
+                Together we can achieve great things!
+            </p>
+        </div>
+    </main>
+    <nav class="left column">
+        <h3>Left heading</h3>
+        <ul>
+            <a href="index.html">home</a><br>
+            <a href="about.html">about</a><br>
+            <a href="media.html">media</a><br>
+            <a href="contact.html">contact</a><br>
+            <a href="table.html">table</a><br>
 
+        </ul>
+    </nav>
+    <div class="right column">
+        <h3>Right heading</h3>
+        <p></p>
+    </div>
+    <div class="push"></div>
+</div>
+<div class="footer-wrapper">
+    <img src="assets/img/1.jpg" alt="logo" width="50" height="50">
+    <footer class="footer"><p>Footer...</p></footer>
+</div>
 </body>
 </html>

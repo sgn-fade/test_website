@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="assets/js/slider.js"></script>
+    <script>
+        window.onload = function() {
+            let slides = [
+                {
+
+                    title: "git",
+                    background: "assets/img/git.png",
+                    link: "https://github.com/sgn-fade/pinky_project"
+                }, {
+                    title: "tg",
+                    background: "assets/img/tg.png",
+                    link: "https://t.me/blewbi"
+                }, {
+                    title: "utube",
+                    background: "assets/img/utube.png",
+                    link: "https://www.youtube.com/channel/UCsDuSz7OP3NFYzOy8x-oorw"
+                }
+            ]
+            Slider.initSlider(slides);
+
+            const prevButton = document.getElementById('prevButton');
+            const nextButton = document.getElementById('nextButton');
+            const toggleSliderButton = document.getElementById('toggleSliderButton');
+            prevButton.addEventListener('click', function () {
+                Slider.prevSlide();
+            });
+
+            nextButton.addEventListener('click', function () {
+                Slider.nextSlide();
+            });
+            toggleSliderButton.addEventListener('click', function () {
+                const slider = document.getElementById('slider');
+                slider.style.display = (slider.style.display === 'none' || slider.style.display === '') ? 'block' : 'none';
+            });
+            toggle.addEventListener('click', (event)=>{
+                if (event.target.classList.contains('stop')){
+                    event.target.innerHTML = 'Start';
+                    clearInterval(interval)
+                } else {
+                    event.target.innerHTML = 'Stop';
+                    interval = setInterval(()=>{
+                        Slider.nextSlide();
+                    },2000)
+                }
+                event.target.classList.toggle('stop')
+            })
+
+        };
+    </script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>3 Column Layout</title>
+    <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+<body>
+<header class="header">
+    <img src="assets/img/2.jpg" alt="logo" width="200" height="100">
+    <p>Header...</p></header>
+<div class="container">
+    <main class="center column">
+        <article>
+            <div id = "slider"></div>
+            <button id="prevButton">Prev</button>
+            <button id="nextButton">Next</button>
+            <button id="toggle">Start</button>
+            <button id="toggleSliderButton">Toggle Slider</button>
+            <p></p>
+        </article>
+    </main>
+    <nav class="left column">
+        <h3>Left heading</h3>
+        <ul>
+            <a href="index.html">home</a><br>
+            <a href="about.html">about</a><br>
+            <a href="media.html">media</a><br>
+            <a href="contact.html">contact</a><br>
+            <a href="table.html">table</a><br>
+
+        </ul>
+    </nav>
+    <div class="right column">
+        <h3>Right heading</h3>
+        <p></p>
+    </div>
+    <div class="push"></div>
+</div>
+<div class="footer-wrapper">
+    <img src="assets/img/1.jpg" alt="logo" width="50" height="50">
+    <footer class="footer"><p>Footer...</p></footer>
+</div>
+</body>
+</html>

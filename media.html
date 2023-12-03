@@ -1,27 +1,51 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>3 Column Layout</title>
     <link rel="stylesheet" href="assets/css/layout.css">
 </head>
 <body>
+<header class="header">
+    <img src="assets/img/2.jpg" alt="logo" width="200" height="100">
+    <p>Header...</p></header>
+<div class="container">
+    <main class="center column">
+        <div class="media-section">
+            <h1>Media</h1>
 
-<div class="media-section">
-    <h1>Media</h1>
+            <audio controls>
+                <source src="public/videos/firepillar_cast_sound.wav" type="audio/wav">
+            </audio>
 
-    <audio controls>
-        <source src="public/videos/firepillar_cast_sound.wav" type="audio/wav">
-    </audio>
-
-    <video width="400" controls>
-        <source src="public/videos/4.mp4" type="video/mp4">
-    </video>
+            <video width="400" controls>
+                <source src="public/videos/4.mp4" type="video/mp4">
+            </video>
 
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/tIY8MwwJDJc" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tIY8MwwJDJc" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </main>
+    <nav class="left column">
+        <h3>Left heading</h3>
+        <ul>
+            <a href="about.html">about</a><br>
+            <a href="media.html">media</a><br>
+            <a href="contact.html">contact</a><br>
+            <a href="table.html">table</a><br>
+
+        </ul>
+    </nav>
+    <div class="right column">
+        <h3>Right heading</h3>
+        <p></p>
+    </div>
+    <div class="push"></div>
 </div>
-
+<div class="footer-wrapper">
+    <img src="assets/img/1.jpg" alt="logo" width="50" height="50">
+    <footer class="footer"><p>Footer...</p></footer>
+</div>
 </body>
 </html>
